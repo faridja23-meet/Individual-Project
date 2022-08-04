@@ -10,6 +10,78 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ .jf {
+  border: 2px solid black;
+  background-color:lightblue;
+  color: black;
+  padding: 4px 20px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-width: 0px;
+  position: absolute;
+  border-radius: 6px;
+  border-color: black;
+/*  border-style: inset; 
+*/ }
+ #emailStr {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+ }
+
+ #FullnameStr {
+  position: absolute;
+  top: 30%;
+  right: 40%;
+ }
+ #UsernameStr {
+  position: absolute;
+  top: 40%;
+  right: 40%;
+ }
+#PasswordStr {
+position: absolute;
+  top: 50%;
+  right: 40%;
+ }
+#Submit {
+position: absolute;
+  top: 60%;
+  right: 46%;
+ }
+ #Signin{
+position: absolute;
+  top: 70%;
+  right: 46%;
+ }
+ .Buttonn{
+  border-radius: 3px;
+  background-color:blue;
+  border-color: black;
+  color: white;
+  padding: 5px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-width: 0px;
+  position: absolute;
+  right: 90%;
+  top: 70% ;
+  
+ }
+ #Submitt{
+position: absolute;
+  top: 40%;
+  right: 46%;
+ }
+ #PassStr{
+  position: absolute;
+  top: 50%;
+  right: 40%;
+ }
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

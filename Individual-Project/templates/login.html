@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>sup</title>
+        <link href="static/css/style.css" rel="stylesheet">
 </head>
 <body>
 <form method="post" action="/">
@@ -19,27 +20,34 @@
         <div>
             <label>Email Address</label>
             <div>
-                <input type="email"  name="email" id="emailStr" required>
+                <input class = "jf" type="email"  name="email" id="emailStr" required>
             </div>
         </div>
+        <br>
+          <br>
 
         <!-- Password -->
         <div>
             <label>Password*</label>
             <div class="input-group">
-                <input type="password"  name="password" minlength="6">
+                <input type="password"  class = "jf" name="password" id="PassStr" minlength="6">
             </div>
         </div>
         
         <!-- Button -->
         <div>
-            <input type="submit"/>
+            <input id="Submitt" class = "jf" type="submit"/>
         </div>
         </center>
     </form>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <h4>If you have not created an account click the Sign Up Button bellow </h4>
-   <a href="/signup"><button >Sign Up</button></a>
+   <a href="/signup"><button class = "Buttonn">Sign Up</button></a>
     <br>
 
 </body>

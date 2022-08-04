@@ -7,6 +7,9 @@ app.config['SECRET_KEY'] = 'super-secret-key'
 
 #Code goes below here
 
+cartItems = []
+cartTotal = 0
+
 
 
 firebaseConfig = {
@@ -44,31 +47,31 @@ def signin():
 	 return render_template("login.html")
 
 
-@app.route('/addItem/<string:code>')
-def addItem(code):
-	watch = db.child("Watches").child(code).get().val()
-	bought_watches.append(code)
+# @app.route('/addItem/<string:code>')
+# def addItem(code):
+# 	watch = db.child("Watches").child(code).get().val()
+# 	bought_watches.append(code)
 
-	return redirect(url_for('index'))
+# 	return redirect(url_for('index'))
 
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-	 error = ""
-	 if request.method == 'POST':
-	 	email = request.form['email']
-	 	password = request.form['password']
-	 	full_name = request.form['full_name']
-	 	username = request.form ['username']
+	error = ""
+	if request.method == 'POST':
+		email = request.form['email']
+		password = request.form['password']
+		full_name = request.form['full_name']
+		username = request.form ['username']
 
-	 	try:
-	 		login_session['user'] = auth.create_user_with_email_and_password(email, password)
-	 		user1 = {"email":email, "password": password, "full_name": full_name, "username":username  }
-	 		db.child("Users").child(login_session["user"]["localId"]).set(user1)
-		 	return redirect(url_for('index'))
-	 	except:
-	 		error = "Authentication failed"
-	 return render_template("signup.html")
+		try:
+			login_session['user'] = auth.create_user_with_email_and_password(email, password)
+			user1 = {"email":email, "password": password, "full_name": full_name, "username":username  }
+			db.child("Users").child(login_session["user"]["localId"]).set(user1)
+			return redirect(url_for('index'))
+		except:
+			error = "Authentication failed"
+	return render_template("signup.html")
 
 @app.route('/index', methods=['GET', 'POST'])
 def index():

@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>Sign Up</title>
+    <link href="static/css/style.css" rel="stylesheet">
 </head>
+
 <body>
 	 <form method="post" action="/signup">
-        <!-- Heading -->
+       <center> <!-- Heading -->
         <h4>
             Create an account
         </h4>
@@ -16,47 +18,58 @@
         </p>
 
         <!-- Email -->
-        <div>
-            <label>Email address*</label>
+        <div >
+            <label>Email address</label>
             <div>
 
-                <input type="email"  name="email" id="emailStr" required>
+                <input class = "jf" type="email"  name="email" id="emailStr" required>
 
             </div>
         </div>
+<br>
+<br>
 
         <!-- Password -->
         <div>
             <label>Insert Full Name</label>
             <div>
-                <input type="text"  name="full_name">
+                <input class = "jf" type="text"  name="full_name" id="FullnameStr">
             </div>
         </div>
 
+        <br>
+    
+
         <div>
-            <label>username</label>
+            <label>User Name</label>
             <div >
-                <input type="text"  name="username" >
+                <input class = "jf" type="text"  name="username" id="UsernameStr">
             </div>
         </div>
+<br>
+<br>
 
 
         <div>
             <label>Password*</label>
             <div class="input-group">
-                <input type="password"  name="password" minlength="4">
+                <input class = "jf"  type="password"  name="password" id="PasswordStr" minlength="4">
             </div>
         </div>
 
 
         
         <!-- Button -->
+        <br>
+        <br>
         <div>
-            <input type="submit"/>
+            <input id="Submit" class = "jf"  type="submit"/>
         </div>
+        </center>
     </form>
     <br>
-    <a href="/"><button>signin</button></a>
+    <a href="/"   ><button class = "Buttonn">signin</button></a>
+
 
 </body>
 </html>
